@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            font-family: 'Courier New', Courier, monospace;
+            box-sizing: border-box;
+        }
+
+        h1{
+            text-align: center;
+            text-decoration: underline;
+            padding: 15px;
+            grid-column: 1/4;
+            font-size: 40px;
+            color: white;
+            background-color: rgb(36, 37, 41);
+        }
+
+        section{
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 30px;
+        display: grid;
+        }
+
+        div{
+            background-color: rgb(36, 37, 41);
+            box-shadow: 5px 10px 20px rgba(0, 0, 0, .4);
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .header{
+            text-align: center;
+            color: white;
+            padding: 10px;
+            background-color: rgb(0, 54, 0);
+            font-weight: bolder;
+            margin-top: -10px;
+            font-size: 25px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+
+        #total_cases,#total_deaths{
+            color:lightgray
+        }
+
+        #new_cases{
+            color: orange;
+        }
+
+        #new_deaths{
+            color: red;
+        }
+
+        #active_cases{
+            color: pink;
+        }
+
+        #new_recovered{
+            color: green;
+        }
+
+        #critical_condition{
+            color: yellow;
+        }
+
+        #total_cases, #new_cases, #total_deaths, #new_deaths, #active_cases, #new_recovered, #critical_condition{
+            padding: 50px;
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 768px)  {
+            #total_cases, #new_cases, #total_deaths, #new_deaths, #active_cases, #new_recovered, #critical_condition{
+                font-size: 25px;
+            }
+
+            section{
+                grid-template-columns: repeat(2,1fr);
+            }
+
+        }
+
+        @media only screen and (max-width: 425px)  {
+            section{
+                grid-template-columns: repeat(1,1fr);
+                
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>{{country}}</h1>               
+    
+    <section>
+    <div>
+        <p class="header">TotalCases</p>
+        <p id="total_cases">{{total_cases}}</p>
+    </div>
+
+    <div>
+        <p class="header">NewCases</p>
+        <p id="new_cases">{{new_cases}}</p>
+    </div>
+
+    <div>
+        <p class="header">TotalDeaths</p class="header">
+        <p id="total_deaths">{{total_deaths}}</p>
+    </div>
+
+    <div>
+        <p class="header">NewDeaths</p class="header">
+        <p id="new_deaths">{{new_deaths}}</p>
+    </div>
+
+    <div>
+        <p class="header">ActiveCases</p class="header">
+        <p id="active_cases">{{active_cases}}</p>
+    </div>
+
+    <div>
+        <p class="header">NewRecovered</p class="header">
+        <p id="new_recovered">{{new_recovered}}</p>
+    </div>
+
+    <div>
+        <p class="header">CriticalCondition</p class="header">
+        <p id="critical_condition">{{critical_condition}}</p>
+    </div>   
+</section>
+</body>
+</html>
