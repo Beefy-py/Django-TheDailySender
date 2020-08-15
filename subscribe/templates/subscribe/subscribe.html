@@ -107,15 +107,14 @@
         }
 
         .unsubscribe{
-            top: 90px;
-            left: 150px;
-            position: absolute;
-            width: 250px;
+            bottom: 50px;
+            position: relative;
+            width: 100%;
             height: 50px;
             background: red;
             outline: none;
             border-radius: 30px;
-            padding-top: 13px;
+            padding: 10px 20px;
             text-align: center;
             font-weight: bolder;
             color: white;
@@ -137,8 +136,8 @@
     </style>
 </head>
 <body>
-    <a href="{% url 'unsubscribe'%}" class="unsubscribe">Unsubscribe?</a>
     <div class="form-container">
+        <a href="{% url 'unsubscribe'%}" class="unsubscribe">Unsubscribe?</a>
         <h2>Subscribe to the daily data sender.</h2>
         <form action="" method="post">
         {% csrf_token %}

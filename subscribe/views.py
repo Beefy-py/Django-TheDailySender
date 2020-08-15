@@ -20,7 +20,7 @@ def subscribe(request):
             )
 
             subscription.save()
-            return redirect('home')
+            return redirect('stay_safe')
 
     else:
         subscribe_form = SubscribeForm()
@@ -34,7 +34,7 @@ def unsubscribe(request):
         if unsubscribe_form.is_valid():
             e = Subscribe.objects.filter(email=unsubscribe_form.cleaned_data['email'])
             e.delete()
-            return redirect('home')
+            return redirect('stay_safe')
 
     else:
         unsubscribe_form = UnsubscribeForm()
@@ -47,3 +47,7 @@ def subscribers(request):
         'all_subbers': Subscribe.objects.all()
     }
     return render(request, 'subscribe/view_subscribers.html', context)
+
+
+def stay_safe(request):
+    return render(request, 'subscribe/stay_safe.html')
