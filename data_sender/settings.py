@@ -24,7 +24,7 @@ SECRET_KEY = '9+gep92#r1i_#7$e0p%(((v87ze25540smgv^p0+lqbz@_z#9$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '']
+ALLOWED_HOSTS = ['localhost', 'the-daily-sender.herokuapp.com']
 
 # Application definition
 
