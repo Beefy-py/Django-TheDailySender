@@ -53,7 +53,7 @@ def send_to_subscribers():
     for subscriber in Subscribe.objects.all():
         dt_country = subscriber.country.upper()
         context = {
-            'country': data[dt_country]['country'],
+            'country': data[dt_country]['country'].capitalize(),
             'total_cases': data[dt_country]['total_cases'],
             'total_deaths': data[dt_country]['total_deaths'],
             'new_cases': data[dt_country]['new_cases'],
