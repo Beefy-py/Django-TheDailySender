@@ -73,5 +73,5 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         sched = BlockingScheduler()
-        sched.add_job(send_to_subscribers, 'interval', hours=6)
+        sched.add_job(send_to_subscribers, 'interval', seconds=15)
         sched.start()
