@@ -12,6 +12,8 @@ bs4 = "*"
 requests = "*"
 django-widget-tweaks = "*"
 gunicorn = "*"
+psycopg2 = "*"
+dj-database-url = "*"
 
 [requires]
 python_version = "3.8.5"
