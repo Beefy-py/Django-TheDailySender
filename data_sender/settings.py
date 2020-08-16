@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '9+gep92#r1i_#7$e0p%(((v87ze25540smgv^p0+lqbz@_z#9$'
+SECRET_KEY = os.environ['SECRET_KEY_FOR_DAILYSENDER']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -74,7 +74,7 @@ WSGI_APPLICATION = 'data_sender.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {'default': dj_database_url.config(
-    default='postgres://mdbwlvztfvhtkp:4d24d490731d1efae63ec046f5731c04ec041977ad54265e00bdb419dabeaa23@ec2-50-16-198-4.compute-1.amazonaws.com:5432/dfr6brg00408pt')}
+    default=os.environ['DATABASE_URI_FOR_DAILYSENDER'])}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -114,8 +114,8 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST_USER = 'testkenny00@gmail.com'
-EMAIL_HOST_PASSWORD = 'testkenny20040044'
+EMAIL_HOST_USER = os.environ['SENDER_EMAIL']
+EMAIL_HOST_PASSWORD = os.environ['SENDER_PASSWORD']
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_SSL = True
 EMAIL_PORT = 465
