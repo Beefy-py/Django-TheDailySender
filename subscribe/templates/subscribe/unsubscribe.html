@@ -1,112 +1,7 @@
-<!DOCTYPE html>
+{%extends 'subscribe\base.html'%}
 {% load widget_tweaks%}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Unsubscribe</title>
-    <style>
-        * {
-            margin: 0;
-            border: 0;
-            box-sizing: border-box;
-            padding: 0;
-            font-family: 'Courier New', Courier, monospace;
-
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: white;
-        }
-
-        .form-container {
-            position: relative;
-            width: 350px;
-            padding: 40px 40px 60px;
-            background: white;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: -5px -5px 10px rgba(255, 255, 255, .05),
-                5px 5px 15px rgba(0, 0, 0, .5);
-        }
-
-        .form-container h2 {
-            color: red;
-            font-weight: bolder;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-size: larger;
-        }
-
-        .form-container form{
-            text-align: left;
-            margin-top: 40px;
-        }
-
-        .form-container .fieldWrapper {
-            margin-top: 20px;
-        }
-
-        .form-container .fieldWrapper label {
-            display: block;
-            color: black;
-            margin-bottom: 5px;
-            font-size: 18px;
-            font-weight: 700;
-        }
-
-        .form-container .fieldWrapper input{
-            width: 100%;
-            height: 50px;
-            background: red;
-            outline: none;
-            border-radius: 40px;
-            padding: 5px 15px;
-            color: black;
-            font-size: 18px;
-            box-shadow: inset -5px -5px 6px rgba(255, 255, 255, .05),
-                inset 5px 5px 6px rgba(0, 0, 0, .5);
-        }
-
-        .form-container .fieldWrapper input::placeholder{
-            color: rgb(158, 158, 158);
-        }
-
-        .form-container input[type="submit"] {
-            border-radius: 40px;
-            width: 70%;
-            margin-top: 20px;
-            position: relative;
-            background: white;
-            color: black;
-            height: 40px;
-            left: 15%;
-            font-weight: bolder;
-            box-shadow: -5px -5px 6px rgba(255, 255, 255, .05),
-                5px 5px 6px rgba(0, 0, 0, .5);
-            transition: all .4s;
-        }
-
-        .form-container input[type="submit"]:hover{
-            background: red;
-            color: white;
-        }
-
-        .form-container input[type="submit"]:active {
-            color: black;
-            background: red;
-            box-shadow: inset -5px -5px 6px rgba(255, 255, 255, .05),
-                inset 5px 5px 6px rgba(0, 0, 0, .5);
-            outline: none;
-        }
-
-    </style>
-</head>
-<body>
-    <div class="form-container">
+{%block content%}
+    <div class="form-container-unsub">
         <h2>Unsubscribe to the daily data sender.</h2>
         <form action="" method="post">
         {% csrf_token %}
@@ -117,6 +12,6 @@
             {% render_field form.email class='email-field' placeholder='email...' %}
         </div>
         <input type="submit" value="Submit">
+        </form>
     </div>
-</body>
-</html>
+{%endblock content%}

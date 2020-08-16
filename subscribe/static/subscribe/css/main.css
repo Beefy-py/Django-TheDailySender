@@ -1,0 +1,266 @@
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+:root {
+    --main-bg-color: white;
+    --mobile-bg-color: black;
+  }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--main-bg-color);
+}
+
+
+/*------------------------------------*stay-safe-page-styling------------------------------------*/
+.text-container-stay-safe {
+    position: relative;
+    width: 400px;
+    padding: 40px 40px 60px;
+    background: var(--main-bg-color);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, .05),
+        5px 5px 15px rgba(0, 0, 0, .5);
+}
+
+.h1-stay-safe{
+    font-size: 50px;
+    color: green;
+}
+
+/*------------------------------------*home-page-styling------------------------------------*/
+
+.text-container-home {
+    position: relative;
+    width: 400px;
+    padding: 40px 40px 60px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, .05),
+        5px 5px 15px rgba(0, 0, 0, .5);
+}
+
+a.a-home{
+    font-size: 30px;
+    color: green;
+    text-decoration: none;
+    transition: all .4s;
+}
+
+.a-home:hover{
+    text-decoration: underline;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/*------------------------------------*subscribe-page-styling------------------------------------*/
+
+
+.form-container {
+    position: relative;
+    width: 350px;
+    padding: 40px 40px 60px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, .05),
+        5px 5px 15px rgba(0, 0, 0, .5);
+}
+
+.form-container h2 {
+    color: green;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: larger;
+}
+
+.form-container form{
+    text-align: left;
+    margin-top: 40px;
+}
+
+.form-container .fieldWrapper {
+    margin-top: 20px;
+}
+
+.form-container .fieldWrapper label {
+    display: block;
+    color: black;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.form-container .fieldWrapper input ,.country-select-field{
+    width: 100%;
+    height: 50px;
+    background: green;
+    outline: none;
+    border-radius: 40px;
+    padding: 5px 15px;
+    color: black;
+    font-size: 18px;
+    box-shadow: inset -5px -5px 6px rgba(255, 255, 255, .05),
+        inset 5px 5px 6px rgba(0, 0, 0, .5);
+}
+
+.form-container .fieldWrapper input::placeholder ,.country-select-field::placeholder{
+    color: rgb(158, 158, 158);
+}
+
+.form-container input[type="submit"] {
+    border-radius: 40px;
+    width: 70%;
+    margin-top: 20px;
+    position: relative;
+    background: white;
+    color: black;
+    height: 40px;
+    left: 15%;
+    font-weight: bolder;
+    box-shadow: -5px -5px 6px rgba(255, 255, 255, .05),
+        5px 5px 6px rgba(0, 0, 0, .5);
+    transition: all .4s;
+}
+
+.form-container input[type="submit"]:hover{
+    background: green;
+    color: white;
+}
+
+.form-container input[type="submit"]:active {
+    color: black;
+    background: green;
+    box-shadow: inset -5px -5px 6px rgba(255, 255, 255, .05),
+        inset 5px 5px 6px rgba(0, 0, 0, .5);
+    outline: none;
+}
+
+.unsubscribe{
+    bottom: 50px;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: red;
+    outline: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    font-size: 18px;
+    box-shadow: -5px -5px 6px rgba(255, 255, 255, .05),
+         5px 5px 6px rgba(0, 0, 0, .5);
+    transition: all .3s;
+}
+
+.unsubscribe:hover{
+   transform: scale(.97);
+}
+
+.unsubscribe:active{
+    box-shadow: inset -5px -5px 6px rgba(255, 255, 255, .05),
+        inset 5px 5px 6px rgba(0, 0, 0, .5);
+}
+
+
+/*------------------------------------*unsubscribe-page-styling------------------------------------*/
+
+
+.form-container-unsub {
+    position: relative;
+    width: 350px;
+    padding: 40px 40px 60px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, .05),
+        5px 5px 15px rgba(0, 0, 0, .5);
+}
+
+.form-container-unsub h2 {
+    color: red;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: larger;
+}
+
+.form-container-unsub form{
+    text-align: left;
+    margin-top: 40px;
+}
+
+.form-container-unsub .fieldWrapper {
+    margin-top: 20px;
+}
+
+.form-container-unsub .fieldWrapper label {
+    display: block;
+    color: black;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.form-container-unsub .fieldWrapper input{
+    width: 100%;
+    height: 50px;
+    background: red;
+    outline: none;
+    border-radius: 40px;
+    padding: 5px 15px;
+    color: black;
+    font-size: 18px;
+    box-shadow: inset -5px -5px 6px rgba(255, 255, 255, .05),
+        inset 5px 5px 6px rgba(0, 0, 0, .5);
+}
+
+.form-container-unsub .fieldWrapper input::placeholder{
+    color: rgb(158, 158, 158);
+}
+
+.form-container-unsub input[type="submit"] {
+    border-radius: 40px;
+    width: 70%;
+    margin-top: 20px;
+    position: relative;
+    background: white;
+    color: black;
+    height: 40px;
+    left: 15%;
+    font-weight: bolder;
+    box-shadow: -5px -5px 6px rgba(255, 255, 255, .05),
+        5px 5px 6px rgba(0, 0, 0, .5);
+    transition: all .4s;
+}
+
+.form-container-unsub input[type="submit"]:hover{
+    background: red;
+    color: white;
+}
+
+.form-container-unsub input[type="submit"]:active {
+    color: black;
+    background: red;
+    box-shadow: inset -5px -5px 6px rgba(255, 255, 255, .05),
+        inset 5px 5px 6px rgba(0, 0, 0, .5);
+    outline: none;
+}
+
+@media only screen and (max-width:768px){
+    
+}

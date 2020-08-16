@@ -1,58 +1,6 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>The Daily Sender</title>
-    <style>
-        * {
-            margin: 0;
-            border: 0;
-            box-sizing: border-box;
-            padding: 0;
-            font-family: 'Courier New', Courier, monospace;
-
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: white;
-        }
-
-        .text-container {
-            position: relative;
-            width: 400px;
-            padding: 40px 40px 60px;
-            background: white;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: -5px -5px 10px rgba(255, 255, 255, .05),
-                5px 5px 15px rgba(0, 0, 0, .5);
-        }
-
-        a{
-            font-size: 30px;
-            color: green;
-            text-decoration: none;
-            transition: all .4s;
-        }
-
-        a:hover{
-            text-decoration: underline;
-            font-weight: bold;
-            padding: 10px;
-        }
-
-
-
-    </style>
-</head>
-<body>
-    <div class="text-container">
-        <a href="{% url 'subscribe' %}">Subscribe to TheDailySender</a>
+{%extends 'subscribe\base.html'%}
+{%block content%}
+    <div class="text-container-home">
+        <a class="a-home" href="{% url 'subscribe' %}">Subscribe to TheDailySender</a>
     </div>
-</body>
-</html>
+{%endblock content%}

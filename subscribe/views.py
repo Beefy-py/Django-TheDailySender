@@ -5,7 +5,7 @@ from .models import Subscribe
 
 # Create your views here.
 def home(request):
-    context = {'text': 'Thanks for Subbing'}
+    context = {'title': 'TheDailySender'}
     return render(request, 'subscribe/home.html', context)
 
 
@@ -24,7 +24,10 @@ def subscribe(request):
 
     else:
         subscribe_form = SubscribeForm()
-    context = {'form': subscribe_form}
+    context = {
+        'form': subscribe_form,
+        'title': 'Subscribe to TheDailySender'
+    }
     return render(request, 'subscribe/subscribe.html', context=context)
 
 
@@ -38,16 +41,20 @@ def unsubscribe(request):
 
     else:
         unsubscribe_form = UnsubscribeForm()
-    context = {'form': unsubscribe_form}
+    context = {
+        'form': unsubscribe_form,
+        'title': "Unsubscribe to TheDailySender"
+    }
     return render(request, 'subscribe/unsubscribe.html', context)
 
 
 def subscribers(request):
     context = {
-        'all_subbers': Subscribe.objects.all()
+        'all_subbers': Subscribe.objects.all(),
+        'title': "All Subscribers"
     }
     return render(request, 'subscribe/view_subscribers.html', context)
 
 
 def stay_safe(request):
-    return render(request, 'subscribe/stay_safe.html')
+    return render(request, 'subscribe/stay_safe.html', context={'title': "StaySafe"})

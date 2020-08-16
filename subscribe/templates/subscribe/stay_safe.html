@@ -1,46 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Stay Safe</title>
-    <style>
-        * {
-            margin: 0;
-            border: 0;
-            box-sizing: border-box;
-            padding: 0;
-            font-family: 'Courier New', Courier, monospace;
-
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: white;
-        }
-
-        .text-container {
-            position: relative;
-            width: 400px;
-            padding: 40px 40px 60px;
-            background: white;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: -5px -5px 10px rgba(255, 255, 255, .05),
-                5px 5px 15px rgba(0, 0, 0, .5);
-        }
-
-        h1{
-            font-size: 50px;
-            color: green;
-        }
-    </style>
-</head>
-<body>
-    <div class="text-container">
-        <h1>Stay Safe</h1>
+{%extends 'subscribe/base.html'%}
+{%block content%}
+    <div class="text-container-stay-safe">
+        <h1 class="h1-stay-safe">Stay Safe</h1>
     </div>
-</body>
-</html>
+{%endblock content%}
